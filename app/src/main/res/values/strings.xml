@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Restoran</string>
+    <string name="restaurant_name">Madera</string>
+    <string name="button_order">Poruči</string>
 </resources>
