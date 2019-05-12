@@ -40,9 +40,10 @@
     <TextView
         android:id="@+id/textViewExtraComment"
         android:layout_width="305dp"
-        android:layout_height="34dp"
+        android:layout_height="169dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="170dp"
         android:layout_marginTop="206dp"
         android:text="@string/textView_prefixExtraComment"
         android:textSize="20sp" />

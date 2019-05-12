@@ -24,6 +24,7 @@
         android:layout_below="@+id/labelPickFood"
         android:layout_marginEnd="11dp"
         android:layout_toStartOf="@+id/buttonOrder"
+        android:buttonTint="@color/colorPrimaryDark"
         android:text="@string/checkBox_foodOne" />
 
     <CheckBox
@@ -33,6 +34,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/checkBoxFirstFood"
         android:layout_marginTop="83dp"
+        android:buttonTint="@color/colorPrimaryDark"
         android:text="@string/checkBox_foodTwo" />
 
     <TextView
@@ -51,6 +53,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/checkBoxFirstFood"
         android:layout_marginTop="162dp"
+        android:buttonTint="@color/colorPrimaryDark"
         android:text="@string/checkBox_drinkOne" />
 
     <CheckBox
@@ -59,6 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/checkBoxFirstFood"
         android:layout_below="@+id/checkBoxFirstDrink"
+        android:buttonTint="@color/colorPrimaryDark"
         android:text="@string/checkBox_drinkTwo" />
 
     <TextView
@@ -82,7 +86,7 @@
         <android.support.design.widget.TextInputEditText
             android:id="@+id/textInputComment"
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="80dp" />
     </android.support.design.widget.TextInputLayout>
 
     <TextView
@@ -107,6 +111,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:checked="true"
+            android:buttonTint="@color/colorPrimaryDark"
             android:text="@string/radioButton_deliveryTypeOne" />
 
         <RadioButton
@@ -114,12 +119,13 @@
             android:layout_width="237dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:buttonTint="@color/colorPrimaryDark"
             android:text="@string/radioButton_deliveryTypeTwo" />
     </RadioGroup>
 
     <Button
         android:id="@+id/buttonOrder"
-        android:layout_width="wrap_content"
+        android:layout_width="82dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
