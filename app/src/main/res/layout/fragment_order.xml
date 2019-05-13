@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/labelPickFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/spacing_xxl"
+            android:layout_marginTop="@dimen/spacing_xxl"
+            android:text="@string/textView_pickFood" />
+
+        <CheckBox
+            android:id="@+id/checkBoxFirstFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelPickFood"
+            android:layout_alignStart="@+id/labelPickFood"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="@string/checkBox_foodOne" />
+
+        <CheckBox
+            android:id="@+id/checkBoxSecondFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkBoxFirstFood"
+            android:layout_alignStart="@+id/checkBoxFirstFood"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="@string/checkBox_foodTwo" />
+
+        <TextView
+            android:id="@+id/labelPickDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkBoxSecondFood"
+            android:layout_alignStart="@+id/labelPickFood"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:text="@string/textView_pickDrink" />
+
+        <CheckBox
+            android:id="@+id/checkBoxFirstDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelPickDrink"
+            android:layout_alignStart="@+id/checkBoxFirstFood"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="@string/checkBox_drinkOne" />
+
+        <CheckBox
+            android:id="@+id/checkBoxSecondDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkBoxFirstDrink"
+            android:layout_alignStart="@+id/checkBoxFirstFood"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="@string/checkBox_drinkTwo" />
+
+        <TextView
+            android:id="@+id/labelComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkBoxSecondDrink"
+            android:layout_alignStart="@+id/labelPickFood"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:text="@string/textView_extraComment" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelComment"
+            android:layout_marginStart="@dimen/spacing_xxl"
+            android:layout_marginEnd="@dimen/spacing_xxl">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textInputComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/labelDeliveryPick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textInputLayoutComment"
+            android:layout_alignStart="@+id/labelPickFood"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:text="@string/textView_deliveryType" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelDeliveryPick"
+            android:layout_alignStart="@+id/checkBoxFirstFood"
+            android:layout_marginTop="@dimen/spacing_medium">
+
+            <RadioButton
+                android:id="@+id/radioButtonFirstDeliveryOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:checked="true"
+                android:text="@string/radioButton_deliveryTypeOne" />
+
+            <RadioButton
+                android:id="@+id/radioButtonSecondDeliveryOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:text="@string/radioButton_deliveryTypeTwo" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/buttonOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioGroupDelivery"
+            android:layout_marginTop="@dimen/spacing_xxl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/spacing_xxl"
+            android:text="@string/button_order" />
+    </RelativeLayout>
+</ScrollView>

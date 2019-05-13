@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".HomeActivity">
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/logo"
@@ -13,14 +11,13 @@
         android:layout_height="150dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15sp"
         android:layout_marginTop="50sp"
         app:srcCompat="@drawable/restaurant_logo" />
 
     <TextView
         android:id="@+id/nameTextView"
-        android:layout_width="240dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="@string/restaurant_name"
         android:textAlignment="center"
@@ -29,7 +26,7 @@
 
     <Button
         android:id="@+id/buttonHomeOrder"
-        android:layout_width="135dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
