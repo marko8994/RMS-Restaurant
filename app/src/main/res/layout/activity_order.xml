@@ -1,134 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/colorWhite"
+    tools:ignore="ContentDescription,Autofill"
     tools:context=".OrderActivity">
 
-    <TextView
-        android:id="@+id/labelPickFood"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="26dp"
-        android:text="@string/textView_pickFood" />
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
-    <CheckBox
-        android:id="@+id/checkBoxFirstFood"
-        android:layout_width="93dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/labelPickFood"
-        android:layout_marginEnd="11dp"
-        android:layout_toStartOf="@+id/buttonOrder"
-        android:buttonTint="@color/colorPrimaryDark"
-        android:text="@string/checkBox_foodOne" />
+        <ImageView
+            android:id="@+id/orderLogo"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_height"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/restaurant_logo" />
 
-    <CheckBox
-        android:id="@+id/checkBoxSecondFood"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/checkBoxFirstFood"
-        android:layout_marginTop="83dp"
-        android:buttonTint="@color/colorPrimaryDark"
-        android:text="@string/checkBox_foodTwo" />
-
-    <TextView
-        android:id="@+id/labelPickDrink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/checkBoxFirstDrink"
-        android:layout_alignStart="@+id/labelPickFood"
-        android:layout_marginBottom="-160dp"
-        android:text="@string/textView_pickDrink" />
-
-    <CheckBox
-        android:id="@+id/checkBoxFirstDrink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/checkBoxFirstFood"
-        android:layout_marginTop="162dp"
-        android:buttonTint="@color/colorPrimaryDark"
-        android:text="@string/checkBox_drinkOne" />
-
-    <CheckBox
-        android:id="@+id/checkBoxSecondDrink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/checkBoxFirstFood"
-        android:layout_below="@+id/checkBoxFirstDrink"
-        android:buttonTint="@color/colorPrimaryDark"
-        android:text="@string/checkBox_drinkTwo" />
-
-    <TextView
-        android:id="@+id/labelComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/labelPickFood"
-        android:layout_centerVertical="true"
-        android:text="@string/textView_extraComment" />
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/textInputLayoutComment"
-        android:layout_width="352dp"
-        android:layout_height="86dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="182dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/textInputComment"
-            android:layout_width="match_parent"
-            android:layout_height="80dp" />
-    </android.support.design.widget.TextInputLayout>
-
-    <TextView
-        android:id="@+id/labelDeliveryPick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/labelPickFood"
-        android:layout_below="@+id/textInputLayoutComment"
-        android:layout_marginTop="-182dp"
-        android:text="@string/textView_deliveryType" />
-
-    <RadioGroup
-        android:id="@+id/radioGroupDelivery"
-        android:layout_width="313dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/checkBoxFirstFood"
-        android:layout_below="@+id/labelDeliveryPick">
-
-        <RadioButton
-            android:id="@+id/radioButtonFirstDeliveryOption"
+        <TextView
+            android:id="@+id/labelPickFood"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:checked="true"
-            android:buttonTint="@color/colorPrimaryDark"
-            android:text="@string/radioButton_deliveryTypeOne" />
+            android:layout_below="@id/orderLogo"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:text="@string/textView_pickFood"
+            android:textSize="@dimen/text_size_title" />
 
-        <RadioButton
-            android:id="@+id/radioButtonSecondDeliveryOption"
-            android:layout_width="237dp"
+        <CheckBox
+            android:id="@+id/checkBoxFirstFood"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:buttonTint="@color/colorPrimaryDark"
-            android:text="@string/radioButton_deliveryTypeTwo" />
-    </RadioGroup>
+            android:layout_below="@+id/labelPickFood"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:text="@string/checkBox_foodOne"
+            android:textSize="@dimen/text_size_normal"/>
 
-    <Button
-        android:id="@+id/buttonOrder"
-        android:layout_width="82dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
-        android:text="@string/button_order" />
-</RelativeLayout>
+        <CheckBox
+            android:id="@+id/checkBoxSecondFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkBoxFirstFood"
+            android:layout_alignStart="@+id/checkBoxFirstFood"
+            android:layout_alignLeft="@id/checkBoxFirstFood"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:text="@string/checkBox_foodTwo"
+            android:textSize="@dimen/text_size_normal"/>
+
+        <TextView
+            android:id="@+id/labelPickDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkBoxSecondFood"
+            android:layout_alignStart="@+id/labelPickFood"
+            android:layout_alignLeft="@+id/labelPickFood"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/textView_pickDrink"
+            android:textSize="@dimen/text_size_title"/>
+
+        <CheckBox
+            android:id="@+id/checkBoxFirstDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelPickDrink"
+            android:layout_alignStart="@+id/checkBoxSecondFood"
+            android:layout_alignLeft="@id/checkBoxSecondFood"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:text="@string/checkBox_drinkOne"
+            android:textSize="@dimen/text_size_normal"/>
+
+        <CheckBox
+            android:id="@+id/checkBoxSecondDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/checkBoxFirstDrink"
+            android:layout_alignLeft="@id/checkBoxFirstDrink"
+            android:layout_below="@+id/checkBoxFirstDrink"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:text="@string/checkBox_drinkTwo"
+            android:textSize="@dimen/text_size_normal"/>
+
+        <TextView
+            android:id="@+id/labelComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/labelPickDrink"
+            android:layout_alignLeft="@id/labelPickDrink"
+            android:layout_below="@id/checkBoxSecondDrink"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/textView_extraComment"
+            android:textSize="@dimen/text_size_title"/>
+
+        <EditText
+            android:id="@+id/editTextComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelComment"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_alignLeft="@id/checkBoxSecondDrink"
+            android:layout_alignStart="@id/checkBoxSecondDrink"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:hint="@string/textview_comment_hint"
+            android:textSize="@dimen/text_size_normal"/>
+
+        <TextView
+            android:id="@+id/labelDeliveryPick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textView_deliveryType"
+            android:layout_below="@+id/editTextComment"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_alignStart="@+id/labelComment"
+            android:layout_alignLeft="@id/labelComment"
+            android:textSize="@dimen/text_size_title"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelDeliveryPick"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_alignStart="@+id/labelDeliveryPick"
+            android:layout_alignLeft="@id/labelDeliveryPick"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonFirstDeliveryOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/radioButton_deliveryTypeOne"
+                android:textSize="@dimen/text_size_normal"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonSecondDeliveryOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/radioButton_deliveryTypeTwo"
+                android:textSize="@dimen/text_size_normal"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/buttonOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioGroupDelivery"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:text="@string/button_order"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+</ScrollView>

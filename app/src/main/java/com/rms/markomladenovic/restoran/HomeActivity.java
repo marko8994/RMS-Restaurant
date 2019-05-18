@@ -23,7 +23,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        ImageView imageLogo = findViewById(R.id.logo);
+        ImageView imageLogo = findViewById(R.id.imageViewLogo);
         imageLogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

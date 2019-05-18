@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Madera</string>
-    <string name="restaurant_name">Madera</string>
+    <string name="app_name">Market Bistro</string>
     <string name="button_order">Poruči</string>
     <string name="textView_pickFood">Izaberite hranu</string>
     <string name="checkBox_foodOne">Palačinke</string>
@@ -18,4 +17,8 @@
     <string name="textView_prefixExtraComment">Dodatni komentar: </string>
     <string name="textView_prefixDelivery">Isporuka: </string>
     <string name="button_backToHome">Početna strana</string>
+    <string name="textview_comment_hint">Unesite dodatni komentar</string>
+    <string name="text_view_no_ordered_food">Niste poručili hranu</string>
+    <string name="text_view_no_ordered_drink">Niste poručili piće</string>
+    <string name="text_view_no_extra_comment">Niste zahtevali ništa dodatno</string>
 </resources>

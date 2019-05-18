@@ -1,71 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/colorWhite"
+    tools:ignore="ContentDescription,Autofill"
     tools:context=".OverviewActivity">
 
-    <TextView
-        android:id="@+id/textViewOverviewTitle"
-        android:layout_width="303dp"
-        android:layout_height="36dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="@string/label_overviewTitle"
-        android:textAlignment="center"
-        android:textSize="25sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textViewFoodOrder"
-        android:layout_width="305dp"
-        android:layout_height="34dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="112dp"
-        android:text="@string/textView_prefixFood"
-        android:textSize="20sp" />
+        <ImageView
+            android:id="@+id/overviewLogo"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_height"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/restaurant_logo" />
 
-    <TextView
-        android:id="@+id/textViewDrinkOrder"
-        android:layout_width="305dp"
-        android:layout_height="34dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="156dp"
-        android:text="@string/textView_prefixDrink"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/textViewOverviewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/overviewLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:text="@string/label_overviewTitle"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_size_title" />
 
-    <TextView
-        android:id="@+id/textViewExtraComment"
-        android:layout_width="305dp"
-        android:layout_height="169dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="170dp"
-        android:layout_marginTop="206dp"
-        android:text="@string/textView_prefixExtraComment"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/textViewFoodOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewOverviewTitle"
+            android:layout_marginTop="@dimen/spacing_xxl"
+            android:layout_marginStart="@dimen/spacing_xxl"
+            android:layout_marginLeft="@dimen/spacing_xxl"
+            android:layout_marginEnd="@dimen/spacing_xxl"
+            android:layout_marginRight="@dimen/spacing_xxl"
+            android:text="@string/textView_prefixFood"
+            android:textSize="@dimen/text_size_normal" />
 
-    <TextView
-        android:id="@+id/textViewDeliveryType"
-        android:layout_width="305dp"
-        android:layout_height="34dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="147dp"
-        android:text="@string/textView_prefixDelivery"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/textViewDrinkOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewFoodOrder"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_alignLeft="@id/textViewFoodOrder"
+            android:layout_alignStart="@id/textViewFoodOrder"
+            android:layout_marginEnd="@dimen/spacing_xxl"
+            android:layout_marginRight="@dimen/spacing_xxl"
+            android:text="@string/textView_prefixDrink"
+            android:textSize="@dimen/text_size_normal" />
 
-    <Button
-        android:id="@+id/buttonHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
-        android:text="@string/button_backToHome"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/textViewExtraComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewDrinkOrder"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_alignLeft="@id/textViewDrinkOrder"
+            android:layout_alignStart="@id/textViewDrinkOrder"
+            android:layout_marginEnd="@dimen/spacing_xxl"
+            android:layout_marginRight="@dimen/spacing_xxl"
+            android:text="@string/textView_prefixExtraComment"
+            android:textSize="@dimen/text_size_normal" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/textViewDeliveryType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewExtraComment"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_alignLeft="@id/textViewExtraComment"
+            android:layout_alignStart="@id/textViewExtraComment"
+            android:layout_marginEnd="@dimen/spacing_xxl"
+            android:layout_marginRight="@dimen/spacing_xxl"
+            android:text="@string/textView_prefixDelivery"
+            android:textSize="@dimen/text_size_normal" />
+
+        <Button
+            android:id="@+id/buttonHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewDeliveryType"
+            android:layout_marginTop="@dimen/spacing_xxl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/text_size_title"
+            android:textStyle="bold"
+            android:text="@string/button_backToHome"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+</ScrollView>
