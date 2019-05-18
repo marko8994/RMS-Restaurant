@@ -71,6 +71,6 @@ public class OverviewActivity extends AppCompatActivity {
             textViewComment.setText(comment);
             String deliveryType = getString(R.string.textView_deliveryType) + ": " + order.getDeliveryType();
             textViewDeliveryType.setText(deliveryType);
-        }
+        } 
     }
 }
