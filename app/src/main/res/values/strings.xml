@@ -21,4 +21,5 @@
     <string name="text_view_no_ordered_food">Niste poručili hranu</string>
     <string name="text_view_no_ordered_drink">Niste poručili piće</string>
     <string name="text_view_no_extra_comment">Niste zahtevali ništa dodatno</string>
+    <string name="uri_restaurant_page">https://www.tripadvisor.rs/Restaurants-g294472-Belgrade.html</string>
 </resources>

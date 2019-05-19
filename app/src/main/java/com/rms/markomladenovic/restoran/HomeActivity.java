@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
                 Intent link = new Intent();
                 link.setAction(Intent.ACTION_VIEW);
                 link.addCategory(Intent.CATEGORY_BROWSABLE);
-                link.setData(Uri.parse("https://www.tripadvisor.rs/Restaurants-g294472-Belgrade.html"));
+                link.setData(Uri.parse(getString(R.string.uri_restaurant_page)));
                 startActivity(link);
             }
         });
